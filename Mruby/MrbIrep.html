@@ -106,6 +106,54 @@
     
 <p>(Not documented)</p>
 
+<p>## Fields:</p>
+<dl class="rdoc-list note-list"><dt>:nlocals 
+<dd>
+<p>(Integer) Number of local variables</p>
+</dd><dt>:nregs 
+<dd>
+<p>(Integer) Number of register variables</p>
+</dd><dt>:flags 
+<dd>
+<p>(Integer)</p>
+</dd><dt>:iseq 
+<dd>
+<p>(FFI::Pointer(*MrbCode))</p>
+</dd><dt>:pool 
+<dd>
+<p>(MrbValue)</p>
+</dd><dt>:syms 
+<dd>
+<p>(FFI::Pointer(*MrbSym))</p>
+</dd><dt>:reps 
+<dd>
+<p>(FFI::Pointer(**MrbIrep))</p>
+</dd><dt>:filename 
+<dd>
+<p>(String) debug info</p>
+</dd><dt>:lines 
+<dd>
+<p>(FFI::Pointer(*Uint16T))</p>
+</dd><dt>:debug_info 
+<dd>
+<p>(MrbIrepDebugInfo)</p>
+</dd><dt>:ilen 
+<dd>
+<p>(Integer)</p>
+</dd><dt>:plen 
+<dd>
+<p>(Integer)</p>
+</dd><dt>:slen 
+<dd>
+<p>(Integer)</p>
+</dd><dt>:rlen 
+<dd>
+<p>(Integer)</p>
+</dd><dt>:refcnt 
+<dd>
+<p>(Integer)</p>
+</dd></dl>
+
 
   </div>
 </div>
@@ -125,7 +173,7 @@
 </div>
 
     <div id="footer">
-  Generated on Tue Jul 15 00:21:15 2014 by
+  Generated on Tue Jul 15 00:42:43 2014 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.7.4 (ruby-2.1.2).
 </div>

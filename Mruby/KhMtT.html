@@ -4,7 +4,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>
-  Class: Mruby::RBasic
+  Class: Mruby::KhMtT
   
     &mdash; Documentation by YARD 0.8.7.4
   
@@ -17,7 +17,7 @@
 <script type="text/javascript" charset="utf-8">
   hasFrames = window.top.frames.main ? true : false;
   relpath = '../';
-  framesUrl = "../frames.html#!Mruby/RBasic.html";
+  framesUrl = "../frames.html#!Mruby/KhMtT.html";
 </script>
 
 
@@ -31,10 +31,10 @@
     <div id="header">
       <div id="menu">
   
-    <a href="../_index.html">Index (R)</a> &raquo;
+    <a href="../_index.html">Index (K)</a> &raquo;
     <span class='title'><span class='object_link'><a href="../Mruby.html" title="Mruby (module)">Mruby</a></span></span>
      &raquo; 
-    <span class="title">RBasic</span>
+    <span class="title">KhMtT</span>
   
 
   <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
@@ -63,7 +63,7 @@
 
     <iframe id="search_frame"></iframe>
 
-    <div id="content"><h1>Class: Mruby::RBasic
+    <div id="content"><h1>Class: Mruby::KhMtT
   
   
   
@@ -80,7 +80,7 @@
           
             <li class="next">FFI::Struct</li>
           
-            <li class="next">Mruby::RBasic</li>
+            <li class="next">Mruby::KhMtT</li>
           
         </ul>
         <a href="#" class="inheritanceTree">show all</a>
@@ -96,7 +96,7 @@
   
   
     <dt class="r2 last">Defined in:</dt>
-    <dd class="r2 last">lib/mrb/r_basic.rb</dd>
+    <dd class="r2 last">lib/mrb/kh_mt_t.rb</dd>
   
 </dl>
 <div class="clear"></div>
@@ -107,21 +107,33 @@
 <p>(Not documented)</p>
 
 <p>## Fields:</p>
-<dl class="rdoc-list note-list"><dt>:tt 
-<dd>
-<p>(Symbol from `enum_mrb_vtype`)</p>
-</dd><dt>:color 
+<dl class="rdoc-list note-list"><dt>:n_buckets 
 <dd>
 <p>(Integer)</p>
-</dd><dt>:flags 
+</dd><dt>:size 
 <dd>
 <p>(Integer)</p>
-</dd><dt>:c 
+</dd><dt>:n_occupied 
 <dd>
-<p>(RClass)</p>
-</dd><dt>:gcnext 
+<p>(Integer)</p>
+</dd><dt>:upper_bound 
 <dd>
-<p>(FFI::Pointer(*RBasic))</p>
+<p>(Integer)</p>
+</dd><dt>:ed_flags 
+<dd>
+<p>(FFI::Pointer(*Uint8T))</p>
+</dd><dt>:keys 
+<dd>
+<p>(FFI::Pointer(*MrbSym))</p>
+</dd><dt>:vals 
+<dd>
+<p>(FFI::Pointer(**RProc))</p>
+</dd><dt>:mask 
+<dd>
+<p>(Integer)</p>
+</dd><dt>:inc 
+<dd>
+<p>(Integer)</p>
 </dd></dl>
 
 
