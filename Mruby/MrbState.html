@@ -1,0 +1,278 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+  Class: Mruby::MrbState
+  
+    &mdash; Documentation by YARD 0.8.7.4
+  
+</title>
+
+  <link rel="stylesheet" href="../css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="../css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '../';
+  framesUrl = "../frames.html#!Mruby/MrbState.html";
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div id="header">
+      <div id="menu">
+  
+    <a href="../_index.html">Index (M)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../Mruby.html" title="Mruby (module)">Mruby</a></span></span>
+     &raquo; 
+    <span class="title">MrbState</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="../method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="../file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+
+    <iframe id="search_frame"></iframe>
+
+    <div id="content"><h1>Class: Mruby::MrbState
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+    <dt class="r1">Inherits:</dt>
+    <dd class="r1">
+      <span class="inheritName">FFI::Struct</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">FFI::Struct</li>
+          
+            <li class="next">Mruby::MrbState</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+      </dd>
+    
+  
+  
+    
+  
+    
+  
+  
+  
+    <dt class="r2 last">Defined in:</dt>
+    <dd class="r2 last">lib/mrb/mrb_state.rb</dd>
+  
+</dl>
+<div class="clear"></div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+<p>(Not documented)</p>
+
+<p>## Fields:</p>
+<dl class="rdoc-list note-list"><dt>:jmp 
+<dd>
+<p>(FFI::Pointer(*Void))</p>
+</dd><dt>:allocf 
+<dd>
+<p>(Proc(callback_mrb_allocf)) memory allocation function</p>
+</dd><dt>:c 
+<dd>
+<p>(MrbContext)</p>
+</dd><dt>:root_c 
+<dd>
+<p>(MrbContext)</p>
+</dd><dt>:exc 
+<dd>
+<p>(RObject) exception</p>
+</dd><dt>:globals 
+<dd>
+<p>(IvTbl) global variable table</p>
+</dd><dt>:top_self 
+<dd>
+<p>(RObject)</p>
+</dd><dt>:object_class 
+<dd>
+<p>(RClass) Object class</p>
+</dd><dt>:class_class 
+<dd>
+<p>(RClass)</p>
+</dd><dt>:module_class 
+<dd>
+<p>(RClass)</p>
+</dd><dt>:proc_class 
+<dd>
+<p>(RClass)</p>
+</dd><dt>:string_class 
+<dd>
+<p>(RClass)</p>
+</dd><dt>:array_class 
+<dd>
+<p>(RClass)</p>
+</dd><dt>:hash_class 
+<dd>
+<p>(RClass)</p>
+</dd><dt>:float_class 
+<dd>
+<p>(RClass)</p>
+</dd><dt>:fixnum_class 
+<dd>
+<p>(RClass)</p>
+</dd><dt>:true_class 
+<dd>
+<p>(RClass)</p>
+</dd><dt>:false_class 
+<dd>
+<p>(RClass)</p>
+</dd><dt>:nil_class 
+<dd>
+<p>(RClass)</p>
+</dd><dt>:symbol_class 
+<dd>
+<p>(RClass)</p>
+</dd><dt>:kernel_module 
+<dd>
+<p>(RClass)</p>
+</dd><dt>:heaps 
+<dd>
+<p>(HeapPage) heaps for GC</p>
+</dd><dt>:sweeps 
+<dd>
+<p>(HeapPage)</p>
+</dd><dt>:free_heaps 
+<dd>
+<p>(HeapPage)</p>
+</dd><dt>:live 
+<dd>
+<p>(Integer) count of live objects</p>
+</dd><dt>:arena 
+<dd>
+<p>(FFI::Pointer(**RBasic)) GC protection array</p>
+</dd><dt>:arena_capa 
+<dd>
+<p>(Integer)</p>
+</dd><dt>:arena_idx 
+<dd>
+<p>(Integer)</p>
+</dd><dt>:gc_state 
+<dd>
+<p>(Symbol from `enum_gc_state`) state of gc</p>
+</dd><dt>:current_white_part 
+<dd>
+<p>(Integer) make white object by white_part</p>
+</dd><dt>:gray_list 
+<dd>
+<p>(RBasic) list of gray objects to be traversed incrementally</p>
+</dd><dt>:atomic_gray_list 
+<dd>
+<p>(RBasic) list of objects to be traversed atomically</p>
+</dd><dt>:gc_live_after_mark 
+<dd>
+<p>(Integer)</p>
+</dd><dt>:gc_threshold 
+<dd>
+<p>(Integer)</p>
+</dd><dt>:gc_interval_ratio 
+<dd>
+<p>(Integer)</p>
+</dd><dt>:gc_step_ratio 
+<dd>
+<p>(Integer)</p>
+</dd><dt>:gc_disabled 
+<dd>
+<p>(Integer)</p>
+</dd><dt>:gc_full 
+<dd>
+<p>(Integer)</p>
+</dd><dt>:is_generational_gc_mode 
+<dd>
+<p>(Integer)</p>
+</dd><dt>:out_of_memory 
+<dd>
+<p>(Integer)</p>
+</dd><dt>:majorgc_old_threshold 
+<dd>
+<p>(Integer)</p>
+</dd><dt>:mems 
+<dd>
+<p>(AllocaHeader)</p>
+</dd><dt>:symidx 
+<dd>
+<p>(Integer)</p>
+</dd><dt>:name2sym 
+<dd>
+<p>(KhN2s) symbol table</p>
+</dd><dt>:e_exception_class 
+<dd>
+<p>(RClass)</p>
+</dd><dt>:e_standard_error_class 
+<dd>
+<p>(RClass)</p>
+</dd><dt>:ud 
+<dd>
+<p>(FFI::Pointer(*Void)) auxiliary data</p>
+</dd></dl>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+
+
+
+
+
+
+  
+
+</div>
+
+    <div id="footer">
+  Generated on Tue Jul 15 00:21:16 2014 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.7.4 (ruby-2.1.2).
+</div>
+
+  </body>
+</html>
