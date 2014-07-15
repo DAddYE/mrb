@@ -132,6 +132,90 @@ module Mruby
   # (Not documented)
   #
   # ## Options:
+  # :expr_beg ::
+  #
+  # :expr_end ::
+  #   ignore newline, +/- is a sign.
+  # :expr_endarg ::
+  #   newline significant, +/- is an operator.
+  # :expr_endfn ::
+  #   ditto, and unbound braces.
+  # :expr_arg ::
+  #   ditto, and unbound braces.
+  # :expr_cmdarg ::
+  #   newline significant, +/- is an operator.
+  # :expr_mid ::
+  #   newline significant, +/- is an operator.
+  # :expr_fname ::
+  #   newline significant, +/- is an operator.
+  # :expr_dot ::
+  #   ignore newline, no reserved words.
+  # :expr_class ::
+  #   right after `.' or `::', no reserved words.
+  # :expr_value ::
+  #   immediate after `class', no here document.
+  # :expr_max_state ::
+  #   alike EXPR_BEG but label is disallowed.
+  #
+  # @method `enum_mrb_lex_state_enum`
+  # @return [Symbol]
+  # @scope class
+  #
+  enum :mrb_lex_state_enum, [
+    :expr_beg, 0,
+    :expr_end, 1,
+    :expr_endarg, 2,
+    :expr_endfn, 3,
+    :expr_arg, 4,
+    :expr_cmdarg, 5,
+    :expr_mid, 6,
+    :expr_fname, 7,
+    :expr_dot, 8,
+    :expr_class, 9,
+    :expr_value, 10,
+    :expr_max_state, 11
+  ]
+
+  # (Not documented)
+  #
+  # ## Options:
+  # :tt_string ::
+  #
+  # :tt_fixnum ::
+  #
+  # :tt_float ::
+  #
+  #
+  # @method `enum_irep_pool_type`
+  # @return [Symbol]
+  # @scope class
+  #
+  enum :irep_pool_type, [
+    :tt_string, 0,
+    :tt_fixnum, 1,
+    :tt_float, 2
+  ]
+
+  # (Not documented)
+  #
+  # ## Options:
+  # :ary ::
+  #
+  # :flat_map ::
+  #
+  #
+  # @method `enum_mrb_debug_line_type`
+  # @return [Symbol]
+  # @scope class
+  #
+  enum :mrb_debug_line_type, [
+    :ary, 0,
+    :flat_map, 1
+  ]
+
+  # (Not documented)
+  #
+  # ## Options:
   # :none ::
   #
   # :mark ::
@@ -147,6 +231,20 @@ module Mruby
     :none, 0,
     :mark, 1,
     :sweep, 2
+  ]
+
+  # (Not documented)
+  #
+  # ## Options:
+  # :str_not_parsing ::
+  #
+  #
+  # @method `enum_mrb_string_type`
+  # @return [Symbol]
+  # @scope class
+  #
+  enum :mrb_string_type, [
+    :str_not_parsing, 0
   ]
 
 end

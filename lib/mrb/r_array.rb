@@ -12,21 +12,21 @@ module Mruby
   #   (RClass)
   # :gcnext ::
   #   (RBasic)
-  # :stack ::
+  # :len ::
+  #   (Integer)
+  # :aux ::
+  #   (RArrayAux)
+  # :ptr ::
   #   (MrbValue)
-  # :mid ::
-  #   (Integer)
-  # :cioff ::
-  #   (Integer)
-  class REnv < FFI::Struct
+  class RArray < FFI::Struct
     layout :tt, :mrb_vtype,
            :color, :uint,
            :flags, :uint,
            :c, RClass.by_ref,
            :gcnext, RBasic.by_ref,
-           :stack, MrbValue.by_ref,
-           :mid, :short,
-           :cioff, :int
+           :len, :int,
+           :aux, RArrayAux.by_value,
+           :ptr, MrbValue.by_ref
   end
 
 end

@@ -1,5 +1,5 @@
 module Mruby
-  # memory pool implementation
+  # (Not documented)
   module MrbPoolWrappers
     # @return [nil]
     def close()

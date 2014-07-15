@@ -12,21 +12,21 @@ module Mruby
   #   (RClass)
   # :gcnext ::
   #   (RBasic)
-  # :stack ::
-  #   (MrbValue)
-  # :mid ::
+  # :len ::
   #   (Integer)
-  # :cioff ::
-  #   (Integer)
-  class REnv < FFI::Struct
+  # :aux ::
+  #   (RStringAux)
+  # :ptr ::
+  #   (String)
+  class RString < FFI::Struct
     layout :tt, :mrb_vtype,
            :color, :uint,
            :flags, :uint,
            :c, RClass.by_ref,
            :gcnext, RBasic.by_ref,
-           :stack, MrbValue.by_ref,
-           :mid, :short,
-           :cioff, :int
+           :len, :int,
+           :aux, RStringAux.by_value,
+           :ptr, :string
   end
 
 end

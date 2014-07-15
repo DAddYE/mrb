@@ -12,21 +12,21 @@ module Mruby
   #   (RClass)
   # :gcnext ::
   #   (RBasic)
-  # :stack ::
-  #   (MrbValue)
-  # :mid ::
-  #   (Integer)
-  # :cioff ::
-  #   (Integer)
-  class REnv < FFI::Struct
+  # :iv ::
+  #   (IvTbl)
+  # :type ::
+  #   (MrbDataType)
+  # :data ::
+  #   (FFI::Pointer(*Void))
+  class RData < FFI::Struct
     layout :tt, :mrb_vtype,
            :color, :uint,
            :flags, :uint,
            :c, RClass.by_ref,
            :gcnext, RBasic.by_ref,
-           :stack, MrbValue.by_ref,
-           :mid, :short,
-           :cioff, :int
+           :iv, IvTbl.by_ref,
+           :type, MrbDataType.by_ref,
+           :data, :pointer
   end
 
 end

@@ -12,21 +12,18 @@ module Mruby
   #   (RClass)
   # :gcnext ::
   #   (RBasic)
-  # :stack ::
-  #   (MrbValue)
-  # :mid ::
+  # :edges ::
+  #   (MrbRangeEdges)
+  # :excl ::
   #   (Integer)
-  # :cioff ::
-  #   (Integer)
-  class REnv < FFI::Struct
+  class RRange < FFI::Struct
     layout :tt, :mrb_vtype,
            :color, :uint,
            :flags, :uint,
            :c, RClass.by_ref,
            :gcnext, RBasic.by_ref,
-           :stack, MrbValue.by_ref,
-           :mid, :short,
-           :cioff, :int
+           :edges, MrbRangeEdges.by_ref,
+           :excl, :int
   end
 
 end
